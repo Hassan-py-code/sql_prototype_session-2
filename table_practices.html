@@ -1,0 +1,365 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Data</title>
+</head>
+<body>
+
+    <h4> <mark>1-request</mark> : select title , datepub from articles;</h4>
+
+<table border=1>
+<tr>
+<td bgcolor=silver class='medium'>title</td>
+<td bgcolor=silver class='medium'>datepub</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>SQL Intro</td>
+<td class='normal' valign='top'>2025-01-10</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>PHP Basics</td>
+<td class='normal' valign='top'>2025-12-15</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>HTML Guide</td>
+<td class='normal' valign='top'>2025-12-29</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>CSS Tips</td>
+<td class='normal' valign='top'>2025-03-20</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>JavaScript DOM</td>
+<td class='normal' valign='top'>2025-04-18</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Laravel Framework</td>
+<td class='normal' valign='top'>2026-01-03</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>React Basics</td>
+<td class='normal' valign='top'>2025-06-01</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>MySQL Joins</td>
+<td class='normal' valign='top'>2025-07-10</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>REST API</td>
+<td class='normal' valign='top'>2025-08-12</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Web Security</td>
+<td class='normal' valign='top'>2025-09-30</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Docker Basics</td>
+<td class='normal' valign='top'>2025-12-10</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Kubernetes Intro</td>
+<td class='normal' valign='top'>2025-12-15</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>AI Today</td>
+<td class='normal' valign='top'>2026-01-11</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Old Blog Post</td>
+<td class='normal' valign='top'>2024-11-10</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Spam Article</td>
+<td class='normal' valign='top'>2025-06-01</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Update Test Article</td>
+<td class='normal' valign='top'>2026-01-10</td>
+</tr>
+</table>
+ 
+    <h4> <mark>2-request </mark>: select * from users 
+where f_name like "El%";</h4>
+  <table border=1>
+<tr>
+<td bgcolor=silver class='medium'>id_user</td>
+<td bgcolor=silver class='medium'>f_name</td>
+<td bgcolor=silver class='medium'>l_name</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>2</td>
+<td class='normal' valign='top'>El Hassan</td>
+<td class='normal' valign='top'>Karimi</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>8</td>
+<td class='normal' valign='top'>El Mehdi</td>
+<td class='normal' valign='top'>Alaoui</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>12</td>
+<td class='normal' valign='top'>El Mostafa</td>
+<td class='normal' valign='top'>Cherkaoui</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>18</td>
+<td class='normal' valign='top'>El Houssaine</td>
+<td class='normal' valign='top'>Mokhtari</td>
+</tr>
+</table>
+
+<h4> <mark>3-request</mark> : select * from articles
+where id_user=1
+order by datepub asc;</h4>
+
+<table border=1>
+<tr>
+<td bgcolor=silver class='medium'>id_article</td>
+<td bgcolor=silver class='medium'>title</td>
+<td bgcolor=silver class='medium'>content</td>
+<td bgcolor=silver class='medium'>datepub</td>
+<td bgcolor=silver class='medium'>status</td>
+<td bgcolor=silver class='medium'>id_user</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>SQL Intro</td>
+<td class='normal' valign='top'>This article explains the basics of SQL and relational databases.</td>
+<td class='normal' valign='top'>2025-01-10</td>
+<td class='normal' valign='top'>Published</td>
+<td class='normal' valign='top'>1</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>4</td>
+<td class='normal' valign='top'>CSS Tips</td>
+<td class='normal' valign='top'>Improve your website design using modern CSS techniques.</td>
+<td class='normal' valign='top'>2025-03-20</td>
+<td class='normal' valign='top'>Published</td>
+<td class='normal' valign='top'>1</td>
+</tr>
+</table>
+
+<h4><mark>4-request</mark> :  SELECT *
+FROM articles
+<br>
+WHERE YEAR(datepub) = YEAR(CURRENT_DATE - INTERVAL 1 MONTH)
+<br>
+  AND MONTH(datepub) = MONTH(CURRENT_DATE - INTERVAL 1 MONTH);</h4>
+
+  <table border=1>
+<tr>
+<td bgcolor=silver class='medium'>id_article</td>
+<td bgcolor=silver class='medium'>title</td>
+<td bgcolor=silver class='medium'>content</td>
+<td bgcolor=silver class='medium'>datepub</td>
+<td bgcolor=silver class='medium'>status</td>
+<td bgcolor=silver class='medium'>id_user</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>2</td>
+<td class='normal' valign='top'>PHP Basics</td>
+<td class='normal' valign='top'>Learn PHP syntax, variables, and simple backend logic.</td>
+<td class='normal' valign='top'>2025-12-15</td>
+<td class='normal' valign='top'>Published</td>
+<td class='normal' valign='top'>2</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>3</td>
+<td class='normal' valign='top'>HTML Guide</td>
+<td class='normal' valign='top'>Complete guide to HTML tags and page structure.</td>
+<td class='normal' valign='top'>2025-12-29</td>
+<td class='normal' valign='top'>Archived</td>
+<td class='normal' valign='top'>2</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>11</td>
+<td class='normal' valign='top'>Docker Basics</td>
+<td class='normal' valign='top'>Learn how to containerize applications using Docker.</td>
+<td class='normal' valign='top'>2025-12-10</td>
+<td class='normal' valign='top'>Published</td>
+<td class='normal' valign='top'>10</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>12</td>
+<td class='normal' valign='top'>Kubernetes Intro</td>
+<td class='normal' valign='top'>Introduction to Kubernetes and container orchestration.</td>
+<td class='normal' valign='top'>2025-12-15</td>
+<td class='normal' valign='top'>Archived</td>
+<td class='normal' valign='top'>11</td>
+</tr>
+</table>
+
+
+ <h3> <mark>4-Request </mark> : select * from articles 
+where datepub = curdate(); </h3>
+
+ <table border=1>
+<tr>
+<td bgcolor=silver class='medium'>id_article</td>
+<td bgcolor=silver class='medium'>title</td>
+<td bgcolor=silver class='medium'>content</td>
+<td bgcolor=silver class='medium'>datepub</td>
+<td bgcolor=silver class='medium'>status</td>
+<td bgcolor=silver class='medium'>id_user</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>13</td>
+<td class='normal' valign='top'>AI Today</td>
+<td class='normal' valign='top'>Overview of artificial intelligence trends in 2026.</td>
+<td class='normal' valign='top'>2026-01-11</td>
+<td class='normal' valign='top'>Published</td>
+<td class='normal' valign='top'>12</td>
+</tr>
+</table>
+  
+ <h3><mark>5-Request</mark> : select * from articles 
+where id_user =1  and status="Archived";</h3>
+<table border=1>
+<tr>
+<td bgcolor=silver class='medium'>id_article</td>
+<td bgcolor=silver class='medium'>title</td>
+<td bgcolor=silver class='medium'>content</td>
+<td bgcolor=silver class='medium'>datepub</td>
+<td bgcolor=silver class='medium'>status</td>
+<td bgcolor=silver class='medium'>id_user</td>
+</tr>
+</table>
+
+<h3> <mark>6-Request </mark>:  SELECT COUNT(*) AS published_articles
+FROM articles a
+<br>
+JOIN users u ON a.id_user = u.id_user
+<br>
+WHERE u.f_name = 'Ahmed'
+  AND u.l_name = 'Alami'
+  AND a.status = 'Published';</h3>
+
+<table border=1>
+<tr>
+<td bgcolor=silver class='medium'>published_articles</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>2</td>
+</tr>
+</table>
+
+
+<h3> <mark>7-Request</mark> : SELECT MONTH(datepub) AS month, COUNT(*) AS total_articles
+FROM articles
+<br>
+WHERE YEAR(datepub) = 2025
+  AND status = 'Published'
+  <br>
+GROUP by month(datepub)
+ORDER by month;
+</h3>
+
+<table border=1>
+<tr>
+<td bgcolor=silver class='medium'>month</td>
+<td bgcolor=silver class='medium'>total_articles</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>1</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>3</td>
+<td class='normal' valign='top'>1</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>4</td>
+<td class='normal' valign='top'>1</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>6</td>
+<td class='normal' valign='top'>2</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>7</td>
+<td class='normal' valign='top'>1</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>8</td>
+<td class='normal' valign='top'>1</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>12</td>
+<td class='normal' valign='top'>2</td>
+</tr>
+</table>
+
+<h3><mark>8-Request</mark> : update articles
+SET status = 'Archived'
+where id_article = 1;</h3>
+
+<h3> update articles
+set datepub = '2026-01-01'
+where id_article = 1;
+</h3>
+
+<table border=1>
+<tr>
+<td bgcolor=silver class='medium'>id_article</td>
+<td bgcolor=silver class='medium'>title</td>
+<td bgcolor=silver class='medium'>content</td>
+<td bgcolor=silver class='medium'>datepub</td>
+<td bgcolor=silver class='medium'>status</td>
+<td bgcolor=silver class='medium'>id_user</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>SQL Intro</td>
+<td class='normal' valign='top'>This article explains the basics of SQL and relational databases.</td>
+<td class='normal' valign='top'>2026-01-01</td>
+<td class='normal' valign='top'>Archived</td>
+<td class='normal' valign='top'>1</td>
+</tr>
+</table>
+ 
+<h3> <mark>9-Request</mark> : delete from articles
+where id_user = 1;
+</h3>
+<h3>delete from users
+where f_name = 'Ahmed'
+  and l_name = 'Alami';</h3>
+
+
+
+</body>
+</html>
